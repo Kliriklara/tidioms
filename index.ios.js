@@ -1,52 +1,27 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- */
 'use strict';
+
 import React, {
   AppRegistry,
   Component,
-  StyleSheet,
-  Text,
-  View
 } from 'react-native';
 
-class tidioms extends Component {
+const MOCKED_CARDS_DATA = [
+  { text: "You can't get blood out of a stone" },
+  { text: "Don't teach your grandmother to suck eggs" },
+  { text: "A voice as smooth as syrup" },
+  { text: "Like thinking through treacle" },
+  { text: "To be in a jam" },
+  { text: "That's the way the cookie crumbles" }
+];
+
+import Cards from './src/cards';
+
+class Tidioms extends Component {
   render() {
     return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.ios.js
-        </Text>
-        <Text style={styles.instructions}>
-          Press Cmd+R to reload,{'\n'}
-          Cmd+D or shake for dev menu
-        </Text>
-      </View>
+      <Cards cards={MOCKED_CARDS_DATA} style={{flex: 1}} />
     );
   }
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
-});
-
-AppRegistry.registerComponent('tidioms', () => tidioms);
+AppRegistry.registerComponent('tidioms', () => Tidioms);
