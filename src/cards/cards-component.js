@@ -1,4 +1,4 @@
-import React, { Component } from 'react-native';
+import React, { Component, View } from 'react-native';
 import SwipeCards from 'react-native-swipe-cards';
 import Card from '../card';
 
@@ -15,15 +15,17 @@ class CardsComponent extends Component {
     const { cards } = this.props;
 
     return (
-      <SwipeCards
-        cards={cards}
+      <View style={{ paddingTop: 63, flex: 1 }}>
+        <SwipeCards
+          cards={cards}
 
-        renderCard={(cardData) => <Card {...cardData} />}
-        renderNoMoreCards={() => alert('No more cards ;(')}
+          renderCard={(cardData) => <Card {...cardData} />}
+          renderNoMoreCards={() => alert('No more cards ;(')}
 
-        handleYup={this.handleYup}
-        handleNope={this.handleNope}
-      />
+          handleYup={this.handleYup}
+          handleNope={this.handleNope}
+        />
+      </View>
     );
   }
 }

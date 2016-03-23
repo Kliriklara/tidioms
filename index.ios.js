@@ -9,7 +9,6 @@ import Cards from './src/cards';
 
 const MOCKED_CARDS_DATA = [
   { text: "You can't get blood out of a stone" },
-  { text: "Don't teach your grandmother to suck eggs" },
   { text: "A voice as smooth as syrup" },
   { text: "Like thinking through treacle" },
   { text: "To be in a jam" },
@@ -35,10 +34,11 @@ class Tidioms extends Component {
       <NavigatorIOS
         ref='nav'
         barTintColor={BAR_TINT_COLOR}
+        tintColor={TINT_COLOR}
         itemWrapperStyle={{ flex:1 }}
         style={{ flex:1 }}
         initialRoute={{
-          title: 'Tidioms Cards',
+          title: 'Tidioms',
           component: Cards,
           passProps: { cards: MOCKED_CARDS_DATA },
           rightButtonTitle: 'Settings',
@@ -49,6 +49,7 @@ class Tidioms extends Component {
   }
 }
 
-const BAR_TINT_COLOR = '#BDBA62';
+const BAR_TINT_COLOR = '#607D8B',
+  TINT_COLOR = '#ECECEC';
 
 AppRegistry.registerComponent('tidioms', () => Tidioms);
