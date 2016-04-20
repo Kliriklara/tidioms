@@ -1,30 +1,22 @@
 import React, { Component, View } from 'react-native';
 import SwipeCards from 'react-native-swipe-cards';
 import Card from '../card';
-import { NAVBAR_HEIGHT } from '../../../index.ios.js';
+import { NAVBAR_HEIGHT } from '../../containers/tidioms';
 
 class CardsComponent extends Component {
-  handleYup (card) {
-    console.log(`Yup for ${card.text}`)
-  }
-
-  handleNope (card) {
-    console.log(`Nope for ${card.text}`)
-  }
-
   render() {
-    const { cards } = this.props;
+    const { idioms, like, dislike } = this.props;
 
     return (
       <View style={{ paddingTop: NAVBAR_HEIGHT, flex: 1 }}>
         <SwipeCards
-          cards={cards}
+          cards={idioms}
 
-          renderCard={(cardData) => <Card {...cardData} />}
+          renderCard={cardData => <Card {...cardData} />}
           renderNoMoreCards={() => alert('No more cards ;(')}
 
-          handleYup={this.handleYup}
-          handleNope={this.handleNope}
+          handleYup={like}
+          handleNope={dislike}
         />
       </View>
     );

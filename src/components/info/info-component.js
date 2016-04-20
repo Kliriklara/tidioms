@@ -5,7 +5,7 @@ import React, {
   Text,
   StyleSheet,
 } from 'react-native';
-import { NAVBAR_HEIGHT } from '../../../index.ios.js';
+import { NAVBAR_HEIGHT } from '../../containers/tidioms';
 
 class InfoComponent extends Component {
   render() {
