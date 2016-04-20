@@ -9,7 +9,7 @@ import CardWrapper from './card-wrapper';
 
 class CardComponent extends Component {
   render() {
-    const { text, imageUrl } = this.props;
+    const { text, imageUrl, description } = this.props;
 
     return (
       <View style={styles.card}>
@@ -20,6 +20,9 @@ class CardComponent extends Component {
         <Text style={styles.text}>
           {text}
         </Text>
+        <Text style={styles.description}>
+          {description}
+        </Text>
       </View>
     );
   }
@@ -29,8 +32,8 @@ const styles = StyleSheet.create({
   card: {
     flex: 1,
     alignItems: 'center',
-    width: 280,
-    height: 340,
+    width: 320,
+    height: 440,
     paddingLeft: 20,
     paddingRight: 20,
     paddingBottom: 20,
@@ -46,15 +49,18 @@ const styles = StyleSheet.create({
   },
   image: {
     height: 200,
-    width: 280,
+    width: 320,
     resizeMode: 'cover',
   },
   text: {
     textAlign: 'center',
-    marginTop: 10,
+    marginTop: 20,
     fontSize: 20,
     fontWeight: 'bold',
   },
+  description: {
+    marginTop: 20,
+  }
 });
 
 export default CardWrapper(CardComponent);

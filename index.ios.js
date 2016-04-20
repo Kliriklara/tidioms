@@ -5,7 +5,8 @@ import React, {
   Component,
   NavigatorIOS,
 } from 'react-native';
-import Cards from './src/cards';
+import Info from './src/components/info';
+import Cards from './src/components/cards';
 
 const MOCKED_CARDS_DATA = [
   { text: "Bob’s your uncle (and fanny’s your aunt)", description: "This phrase means that something will be successful. It is the equivalent of ‘and there you go,’ or as the French say ‘et voilà!’ Adding the ‘and fanny’s your aunt’ makes you that much more British." },

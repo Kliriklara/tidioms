@@ -1,6 +1,6 @@
 import React, { Component } from 'react-native';
-import { getPicture } from '../services/flickr';
-import { getNounOrVerb } from '../services/tagger';
+import { getPicture } from '../../services/flickr';
+import { getNounOrVerb } from '../../services/tagger';
 
 const LOADING_URL = 'http://jimpunk.com/Loading/loading46.gif';
 

@@ -1,6 +1,7 @@
 import React, { Component, View } from 'react-native';
 import SwipeCards from 'react-native-swipe-cards';
 import Card from '../card';
+import { NAVBAR_HEIGHT } from '../../../index.ios.js';
 
 class CardsComponent extends Component {
   handleYup (card) {
@@ -15,7 +16,7 @@ class CardsComponent extends Component {
     const { cards } = this.props;
 
     return (
-      <View style={{ paddingTop: 63, flex: 1 }}>
+      <View style={{ paddingTop: NAVBAR_HEIGHT, flex: 1 }}>
         <SwipeCards
           cards={cards}
 
