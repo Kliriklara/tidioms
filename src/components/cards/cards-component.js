@@ -4,8 +4,24 @@ import Card from '../card';
 import { NAVBAR_HEIGHT } from '../../containers/tidioms';
 
 class CardsComponent extends Component {
+  constructor() {
+    super();
+    this.handleLike = this.handleLike.bind(this);
+    this.handleDislike = this.handleDislike.bind(this);
+  }
+
+  handleLike(idiom) {
+    const { like } = this.props;
+    like(idiom.id);
+  }
+
+  handleDislike(idiom) {
+    const { dislike } = this.props;
+    dislike(idiom.id);
+  }
+
   render() {
-    const { idioms, like, dislike } = this.props;
+    const { idioms } = this.props;
 
     return (
       <View style={{ paddingTop: NAVBAR_HEIGHT, flex: 1 }}>
@@ -15,8 +31,8 @@ class CardsComponent extends Component {
           renderCard={cardData => <Card {...cardData} />}
           renderNoMoreCards={() => alert('No more cards ;(')}
 
-          handleYup={like}
-          handleNope={dislike}
+          handleYup={this.handleLike}
+          handleNope={this.handleDislike}
         />
       </View>
     );
