@@ -6,9 +6,8 @@ import React, {
   Text,
   StyleSheet,
 } from 'react-native';
-import { NAVBAR_HEIGHT } from '../../containers/tidioms';
 import Swipeout from 'react-native-swipeout';
-import { compact, includes, find, partial } from 'lodash';
+import { find, partial } from 'lodash';
 
 class InfoComponent extends Component {
   constructor() {
@@ -38,6 +37,14 @@ class InfoComponent extends Component {
   render() {
     const { dataSource } = this.props;
 
+    if (!dataSource) {
+      return (
+        <ScrollView>
+          <Text style={styles.text}>You don't have any idioms yet!</Text>
+        </ScrollView>
+      );
+    }
+
     return (
       <ListView
         dataSource={dataSource}
@@ -51,7 +58,7 @@ const styles = StyleSheet.create({
   text: {
     paddingTop: 20,
     paddingRight: 20,
-    paddingLeft: 20,
+    paddingLeft: 20
   },
   li: {
     backgroundColor: '#fff',
@@ -60,7 +67,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     paddingLeft: 16,
     paddingTop: 14,
-    paddingBottom: 16,
+    paddingBottom: 16
   }
 });
 

@@ -30,8 +30,12 @@ class Tidioms extends Component {
     const arr = Array.from(ratedIdioms, (v, k) => v[1] ? v[0] : undefined);
     const compactedArr = compact(arr);
 
-    const ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2 });
-    const dataSource = ds.cloneWithRows(compactedArr);
+    let dataSource;
+
+    if (compactedArr.length > 0) {
+      const ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2 });
+      dataSource = ds.cloneWithRows(compactedArr);
+    }
 
     return {
       title: 'Info',

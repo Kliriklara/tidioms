@@ -51,6 +51,7 @@ const styles = StyleSheet.create({
     height: 200,
     width: 320,
     resizeMode: 'cover',
+    backgroundColor: '#d3d3d3',
   },
   text: {
     textAlign: 'center',
