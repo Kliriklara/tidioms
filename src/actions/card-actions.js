@@ -1,4 +1,4 @@
-import { LIKE, DISLIKE } from './card-action-types';
+import { LIKE, DISLIKE, REMOVE } from './card-action-types';
 
 export const like = id => {
   return {
@@ -10,6 +10,13 @@ export const like = id => {
 export const dislike = id => {
   return {
     type: DISLIKE,
+    id,
+  }
+};
+
+export const remove = id => {
+  return {
+    type: REMOVE,
     id,
   }
 };

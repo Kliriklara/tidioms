@@ -10,6 +10,7 @@
     "pos": "^0.3.0",
     "react-native": "^0.21.0",
     "react-native-swipe-cards": "0.0.7",
+    "react-native-swipeout": "^2.0.12",
     "react-redux": "^4.4.5",
     "redux": "^3.5.1"
   }
