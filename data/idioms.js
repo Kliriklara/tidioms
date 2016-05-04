@@ -15,6 +15,11 @@ export const MOCKED_IDIOMS_DATA = [
     description: "This is one that our grandparents have told us our whole lives. If you take care not to waste small amounts of money, then it will accumulate into something more substantial."
   },
   {
+    id: 24,
+    text: 'Don’t come the raw prawn with me',
+    description: 'Don’t try to fool me.'
+  },
+  {
     id: 4,
     text: "And pigs might fly",
     description: "This is a skeptical comment which is used to describe a lack of belief that something will happen. For example, you could comment on your brother’s intention to give up cigarettes by saying “and pigs might fly”. In other words you don’t believe that your brother will give up smoking."
@@ -63,6 +68,11 @@ export const MOCKED_IDIOMS_DATA = [
     id: 13,
     text: "Cupboard love",
     description: "To show love to gain something from someone"
+  },
+  {
+    id: 25,
+    text: "Flat out like a lizard drinking",
+    description: "Very busy (you might say it after a busy day when you’re tired: I’ve been flat out...)",
   },
   {
     id: 14,
@@ -114,4 +124,14 @@ export const MOCKED_IDIOMS_DATA = [
     text: "Throw a cat among the pigeons ",
     description: "This metaphor paints a pretty clear picture; it means to say or do something that will cause a chaotic disturbance among a group. For example, if you were to walk into a Star Trek convention, commandeer the PA system then announce over the loudspeaker that Leonard Nimoy had canceled, you would be throwing a cat among the pigeons."
   },
+  {
+    id: 26,
+    text: "Chuck a sickie",
+    description: "Take a sick day off work when you’re not really sick."
+  },
+  {
+    id: 27,
+    text: "Carrying on like a pork chop",
+    description: "To make a big deal about things, be complaining or fussy."
+  }
 ];
