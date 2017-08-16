@@ -17,7 +17,7 @@ import Cards from '../components/cards';
 import * as cardActions from '../actions/card-actions';
 import { compact, includes, filter } from 'lodash';
 
-const NAVBAR_HEIGHT = 61,
+const NAVBAR_HEIGHT = 64,
   BAR_TINT_COLOR = '#607D8B',
   TINT_COLOR = '#ECECEC';
 
@@ -75,7 +75,7 @@ class Tidioms extends Component {
         barTintColor={BAR_TINT_COLOR}
         tintColor={TINT_COLOR}
         titleTextColor={TINT_COLOR}
-        itemWrapperStyle={{ flex:1 }}
+        itemWrapperStyle={{ flex:1, paddingTop: NAVBAR_HEIGHT }}
         style={{ flex:1 }}
         initialRoute={{
           title: 'Tidioms',
@@ -99,4 +99,3 @@ export default connect(
   })
 )(Tidioms);
 
-export { NAVBAR_HEIGHT };

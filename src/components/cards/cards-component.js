@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { View } from 'react-native';
 import SwipeCards from 'react-native-swipe-cards';
 import Card from '../card';
-import { NAVBAR_HEIGHT } from '../../containers/tidioms';
 
 class CardsComponent extends Component {
   constructor() {
@@ -25,7 +24,7 @@ class CardsComponent extends Component {
     const { idioms } = this.props;
 
     return (
-      <View style={{ paddingTop: NAVBAR_HEIGHT, flex: 1 }}>
+      <View style={{ flex: 1, paddingTop: 30, paddingBottom: 50 }}>
         <SwipeCards
           cards={idioms}
 
