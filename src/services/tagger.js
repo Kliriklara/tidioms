@@ -1,23 +1,23 @@
-// import { Lexer, Tagger } from 'pos';
 import { includes } from 'lodash';
+import nlp from 'compromise';
 
 const NOUN = ['NN', 'NNP', 'NNPS', 'NNS'],
   VERB = ['VB', 'VBD', 'VBG', 'VBN', 'VBP', 'VBZ'];
 
 function getNounOrVerb(text) {
-  // const words = new Lexer().lex(text),
-  //   tagger = new Tagger(),
-  //   taggedWords = tagger
-  //     .tag(words)
-  //     .reverse(); // reverse so that nouns at the end are chosen first
+  const r = nlp(text);
+  const nouns = r.nouns();
 
-  // for (let i in taggedWords) {
-  //   const [ word, tag ] = taggedWords[i];
+  const arr = nouns.out('array');
+  if (arr.length) {
+    return arr[arr.length-1];
+  }
 
-  //   if (includes(NOUN, tag) && word.length > 2) {
-  //     return word;
-  //   }
-  // }
+  const verbs = r.match('#Verb')
+  const verbsArr = verbs.out('array');
+  if (verbsArr.length) {
+    return verbsArr[verbsArr.length-1];
+  }
 
   return '';
 }
