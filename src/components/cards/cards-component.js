@@ -1,4 +1,5 @@
-import React, { Component, View } from 'react-native';
+import React, { Component } from 'react';
+import { View } from 'react-native';
 import SwipeCards from 'react-native-swipe-cards';
 import Card from '../card';
 import { NAVBAR_HEIGHT } from '../../containers/tidioms';

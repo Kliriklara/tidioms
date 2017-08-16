@@ -1,4 +1,4 @@
-import React, { Component } from 'react-native';
+import React, { Component } from 'react';
 import { getPicture } from '../../services/flickr';
 import { getNounOrVerb } from '../../services/tagger';
 

@@ -1,6 +1,6 @@
-import React, {
+import React, { Component } from 'react';
+import {
   View,
-  Component,
   Text,
   Image,
   StyleSheet,

@@ -14,7 +14,7 @@ function getPicture(tag) {
   .then(json => {
     const { photos: { photo } = {} } = json;
 
-    if (!photo) return null;
+    if (!photo) return 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Chav_scally.jpg/220px-Chav_scally.jpg';
 
     const [ { id, secret, farm, server } ] = photo;
     return `https://farm${farm}.staticflickr.com/${server}/${id}_${secret}.jpg`;

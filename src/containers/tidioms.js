@@ -1,11 +1,15 @@
 'use strict';
 
-import React, {
-  AppRegistry,
-  Component,
+import React, { Component } from 'react';
+import {
   NavigatorIOS,
   ListView,
+  View,
+  Text,
 } from 'react-native';
+import {
+  StackNavigator,
+} from 'react-navigation';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import Info from '../components/info';

@@ -5,6 +5,8 @@ config.js
 #
 .DS_Store
 
+.expo
+
 # Xcode
 #
 build/
